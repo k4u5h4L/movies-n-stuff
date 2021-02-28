@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Navbar = () => {
     return (
@@ -6,7 +7,7 @@ const Navbar = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-8 navbar p-0">
-                        <a href="index.html" className="logo">
+                        <a href="/" className="logo">
                             <img
                                 src="images/logo.png"
                                 alt="logo"
@@ -18,6 +19,7 @@ const Navbar = () => {
                                 className="dark"
                             />
                         </a>
+
                         <button
                             className="navbar-toggler"
                             type="button"
@@ -54,10 +56,9 @@ const Navbar = () => {
                                         Video
                                     </a>
                                 </li>
+                                {/* prettier-ignore */}
                                 <li className="nav-item">
-                                    <a className="nav-link" href="landing.html">
-                                        Landing
-                                    </a>
+                                    <Link className="nav-link" href="/login">Login</Link>
                                 </li>
                             </ul>
                         </div>
