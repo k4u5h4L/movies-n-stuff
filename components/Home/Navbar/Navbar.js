@@ -35,28 +35,24 @@ const Navbar = () => {
                             className="collapse navbar-collapse"
                             id="navbarNavDropdown"
                         >
+                            {/* prettier-ignore */}
                             <ul className="navbar-nav nav-menu float-none text-center">
                                 <li className="nav-item">
-                                    <a className="nav-link" href="season.html">
-                                        Season
+                                    <Link className="nav-link" href="/video">Single movie</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="/watch">
+                                        Watch
                                     </a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="single.html">
-                                        Single
-                                    </a>
+                                    <Link className="nav-link" href="/search">
+                                        Search
+                                    </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="search.html">
-                                        Action
-                                    </a>
+                                    <Link className="nav-link" href="/register">Register</Link>
                                 </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="video.html">
-                                        Video
-                                    </a>
-                                </li>
-                                {/* prettier-ignore */}
                                 <li className="nav-item">
                                     <Link className="nav-link" href="/login">Login</Link>
                                 </li>
@@ -69,28 +65,33 @@ const Navbar = () => {
                             <div className="user-menu">
                                 <ul>
                                     <li>
-                                        <a href="profile.html">
-                                            <i className="ti-user"></i>My
-                                            Profile
-                                        </a>
+                                        <Link href="/user">
+                                            <a>
+                                                <i className="ti-user"></i>
+                                                My Profile
+                                            </a>
+                                        </Link>
                                     </li>
-                                    <li>
+                                    {/* <li>
                                         <a href="favorites.html">
                                             <i className="ti-heart"></i>My
                                             Favorites
                                         </a>
+                                    </li> */}
+                                    <li>
+                                        <Link href="/faq">
+                                            <a>
+                                                <i className="ti-world"></i>FAQs
+                                            </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="term.html">
-                                            <i className="ti-world"></i>Privacy
-                                            Policy
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="home.html">
-                                            <i className="ti-power-off"></i>Log
-                                            Out
-                                        </a>
+                                        <Link href="/logout">
+                                            <a>
+                                                <i className="ti-power-off"></i>
+                                                Log Out
+                                            </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>

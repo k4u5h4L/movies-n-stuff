@@ -1,5 +1,6 @@
 import React from "react";
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import { useRouter } from "next/router";
 
 export default class MyDocument extends Document {
     render() {
@@ -14,7 +15,11 @@ export default class MyDocument extends Document {
                         href="images/favicon.png"
                     />
                     <link rel="stylesheet" href="css/style.css" />
-                    <link rel="stylesheet" href="css/video-player.css" />
+                    {/* <link rel="stylesheet" href="css/video-player.css" /> */}
+                    <link
+                        rel="stylesheet"
+                        href="https://video-react.github.io/assets/video-react.css"
+                    />
                 </Head>
                 <body className="try">
                     <Main />
@@ -23,7 +28,8 @@ export default class MyDocument extends Document {
                     <script src="js/plugin.js"></script>
                     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
                     <script src="js/scripts.js"></script>
-                    {/* <script src="js/video-player.js"></script> */}
+
+                    {/* <script defer src="js/video-player.js"></script> */}
                 </body>
             </Html>
         );
