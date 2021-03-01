@@ -38,7 +38,7 @@ const Navbar = () => {
                             {/* prettier-ignore */}
                             <ul className="navbar-nav nav-menu float-none text-center">
                                 <li className="nav-item">
-                                    <Link className="nav-link" href="/video">Single movie</Link>
+                                    <Link className="nav-link" href={`/video/${parseInt(1)}`}>Single movie</Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link className="nav-link" href="/watch">Watch</Link>

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Banner = () => {
+const Banner = ({ movie }) => {
     return (
         <div className="banner-wrapper">
             <div className="container">
@@ -9,10 +9,7 @@ const Banner = () => {
                         <div className="banner-wrap justify-content-between align-items-center">
                             <div className="left-wrap">
                                 <span className="rnd">IMDb 6.7</span>
-                                <h2>
-                                    Made <br />
-                                    in heaven
-                                </h2>
+                                <h2>{movie.name}</h2>
                                 <span className="tag">
                                     <b>SEASON 1</b>
                                 </span>
@@ -24,6 +21,7 @@ const Banner = () => {
                                     <b>16+</b>
                                 </span>
                                 <span className="tag">2 h 20 min</span>
+                                <p>{movie.desc}</p>
                                 <p>
                                     Radhe is a singing prodigy determined to
                                     follow in the classNameical footsteps of his

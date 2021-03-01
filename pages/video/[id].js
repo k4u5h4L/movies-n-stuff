@@ -8,7 +8,11 @@ import Cast from "../../components/Video/Cast/Cast";
 import Slider from "../../components/Home/Slider/Slider";
 import Footer from "../../components/Home/Footer/Footer";
 
-const Video = () => {
+import { PrismaClient } from "@prisma/client";
+
+const prisma = new PrismaClient();
+
+const Video = ({ movie }) => {
     return (
         <div>
             {/* <Preloader /> */}
@@ -16,7 +20,7 @@ const Video = () => {
 
             <div className="main-wrapper">
                 <Navbar />
-                <Banner />
+                <Banner movie={movie} />
                 <Cast />
                 <Slider title="Specials & Latest Movies" />
                 <Footer />
@@ -24,5 +28,25 @@ const Video = () => {
         </div>
     );
 };
+
+export async function getServerSideProps(context) {
+    const movieId = parseInt(context.params.id);
+    const movie = await prisma.movie.findFirst({ where: { id: movieId } });
+    return {
+        props: {
+            movie: movie,
+        },
+    };
+
+    // return {
+    //     props: {
+    //         movie: {
+    //             id: 2,
+    //             name: "Endgame",
+    //             desc: "avengers",
+    //         },
+    //     },
+    // };
+}
 
 export default Video;
