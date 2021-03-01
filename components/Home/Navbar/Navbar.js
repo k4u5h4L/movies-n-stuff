@@ -41,9 +41,7 @@ const Navbar = () => {
                                     <Link className="nav-link" href="/video">Single movie</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/watch">
-                                        Watch
-                                    </a>
+                                    <Link className="nav-link" href="/watch">Watch</Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link className="nav-link" href="/search">
