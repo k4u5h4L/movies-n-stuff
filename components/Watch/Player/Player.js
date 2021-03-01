@@ -32,10 +32,7 @@ export const Player = () => {
                     style={{ marginLeft: "100px" }}
                 >
                     {/* <source src="images/video1.mp4" type="video/mp4" /> */}
-                    <source
-                        src="http://127.0.0.1:8000/video"
-                        type="video/mp4"
-                    />
+                    <source src="/api/video" type="video/mp4" />
 
                     <ControlBar>
                         <ReplayControl seconds={10} order={1.1} />
