@@ -1,34 +1,69 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">Movies N' Stuff</h1></br>
 
-## Getting Started
+<p align="center">
+:clapper: A JAM stack, movie streaming website built with React, Next.js and Prisma ORM. :tv:
+</p>
+<br>
 
-First, run the development server:
+<p align="center">
+  <a href="#"><img alt="built with love" src="https://forthebadge.com/images/badges/built-with-love.svg"/></a>
+  <a href="#"><img alt="js Badge" src="https://forthebadge.com/images/badges/made-with-javascript.svg"/></a>
+  <a href="https://github.com/k4u5h4L"><img alt="k4u5h4L GitHub badge" height="37" src="https://badgen.net/badge/GitHub/k4u5h4L?icon=github&color=24292e"/></a>
+  <a href="#"><img alt="machine Badge" height="37" src="https://forthebadge.com/images/badges/works-on-my-machine.svg"/></a>
+  <a href="#"><img alt="not bug but feature" height="37" src="https://forthebadge.com/images/badges/not-a-bug-a-feature.svg"/></a>
+  <a href="#"><img alt="spaghetti Badge" src="https://forthebadge.com/images/badges/contains-tasty-spaghetti-code.svg"/></a>
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
+<br>
+<p align="center">
+<img width="460px" src="assets/logo.png" alt="toxi-meter logo"></img>
+</p><br>
+
+## Technologies used:
+
+-   React as the UI library.
+
+-   Next.js for the as the server.
+
+-   Prisma as the ORM.
+
+-   NextAuth as the authentication backend with passwordless logins and OAuth.
+
+## To run:
+
+-   Clone and cd into the repo.
+
+```
+git clone https://github.com/k4u5h4L/movies-n-stuff.git && cd movies-n-stuff
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+-   Install the dependencies
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```
+yarn install
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+-   Create a new file called `.env` and fill in variables and keys from different providers.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+-   Run migrations for the DB (if not present).
 
-## Learn More
+```
+npx prisma migrate dev --preview-feature
+npx prisma generate
+```
 
-To learn more about Next.js, take a look at the following resources:
+-   Now run development server.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+yan dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+-   Now visit the location [localhost:3000](http://localhost:3000) to check out the site!
 
-## Deploy on Vercel
+## Note:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+-   This project is made as a hobby and is <b>NOT</b> a commercial application.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+-   It is for learning purposes only.
+
+-   Any contribution is welcome. You may fork the repo and issue a PR.
