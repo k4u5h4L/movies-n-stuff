@@ -10,19 +10,21 @@ const Navbar = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-8 navbar p-0">
-                        <a href="/" className="logo">
-                            <img
-                                src="/images/logo.png"
-                                alt="logo"
-                                className="light"
-                                height="70"
-                            />
-                            <img
-                                src="/images/logo-white.png"
-                                alt="logo"
-                                className="dark"
-                            />
-                        </a>
+                        <Link href="/">
+                            <a className="logo">
+                                <img
+                                    src="/images/logo.png"
+                                    alt="logo"
+                                    className="light"
+                                    height="70"
+                                />
+                                <img
+                                    src="/images/logo-white.png"
+                                    alt="logo"
+                                    className="dark"
+                                />
+                            </a>
+                        </Link>
 
                         <button
                             className="navbar-toggler"

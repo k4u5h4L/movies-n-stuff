@@ -1,16 +1,15 @@
 import React from "react";
 
-import Preloader from "../../components/Preloader/Preloader";
 import Theme from "../../components/Theme";
 import Navbar from "../../components/Home/Navbar/Navbar";
 import Meta from "../../components/Search/Meta/Meta";
 
 import Tiles from "../../components/Search/Tiles/Tiles";
+import Footer from "../../components/Home/Footer/Footer";
 
 const Search = () => {
     return (
         <div>
-            {/* <Preloader /> */}
             <Theme />
 
             <div className="main-wrapper">
@@ -20,6 +19,7 @@ const Search = () => {
                 <Tiles />
                 <Tiles />
                 <Tiles />
+                <Footer />
             </div>
         </div>
     );

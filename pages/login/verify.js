@@ -1,6 +1,5 @@
 import React from "react";
 
-import Preloader from "../../components/Preloader/Preloader";
 import Theme from "../../components/Theme";
 import Navbar from "../../components/Auth/Navbar/Navbar";
 import PostLoginSection from "../../components/Auth/PostLoginSection/PostLoginSection";
@@ -8,7 +7,6 @@ import PostLoginSection from "../../components/Auth/PostLoginSection/PostLoginSe
 const Login = () => {
     return (
         <div>
-            {/* <Preloader /> */}
             <Theme />
 
             <div className="main-wrapper">

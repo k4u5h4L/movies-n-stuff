@@ -1,6 +1,5 @@
 import React from "react";
 
-import Preloader from "../../components/Preloader/Preloader";
 import Theme from "../../components/Theme";
 import Navbar from "../../components/Home/Navbar/Navbar";
 import Banner from "../../components/Video/Banner/Banner";
@@ -24,7 +23,6 @@ const Video = ({ movie, status }) => {
 
     return (
         <div>
-            {/* <Preloader /> */}
             <Theme />
 
             <div className="main-wrapper">

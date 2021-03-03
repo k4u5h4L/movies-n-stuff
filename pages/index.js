@@ -1,6 +1,5 @@
 import React from "react";
 
-import Preloader from "../components/Preloader/Preloader";
 import Theme from "../components/Theme";
 import Navbar from "../components/Home/Navbar/Navbar";
 import Banner from "../components/Home/Banner/Banner";
@@ -12,7 +11,6 @@ import Footer from "../components/Home/Footer/Footer";
 const Home = () => {
     return (
         <div>
-            <Preloader />
             <Theme />
 
             <div className="main-wrapper">
