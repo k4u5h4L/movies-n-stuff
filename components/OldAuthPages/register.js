@@ -1,8 +1,8 @@
 import React from "react";
 
-import Theme from "../components/Theme";
-import Navbar from "../components/Auth/Navbar/Navbar";
-import RegisterSection from "../components/Auth/RegisterSection/RegisterSection";
+import Theme from "../Theme";
+import Navbar from "../Auth/Navbar/Navbar";
+import RegisterSection from "../Auth/RegisterSection/RegisterSection";
 const Register = () => {
     return (
         <div>

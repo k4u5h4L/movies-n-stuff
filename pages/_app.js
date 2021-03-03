@@ -3,12 +3,11 @@ import Head from "next/head";
 
 import { Provider } from "next-auth/client";
 
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
-
 import "../styles/404.css";
 import "../styles/style.css";
 import "../styles/themify-icons.css";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
 
 function MyApp({ Component, pageProps }) {
     return (

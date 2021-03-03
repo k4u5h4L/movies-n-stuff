@@ -40,4 +40,12 @@ export default (req, res) =>
                 return "/";
             },
         },
+        pages: {
+            // signIn: "/auth/signin",
+            signIn: "/login",
+            signOut: "/auth/signout",
+            error: "/auth/error", // Error code passed in query string as ?error=
+            verifyRequest: "/login/verify-request", // (used for check email message)
+            newUser: null, // If set, new users will be directed here on first sign in
+        },
     });

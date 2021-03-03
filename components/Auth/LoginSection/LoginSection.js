@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-import { signin, signIn, signout, useSession } from "next-auth/client";
+import { signIn, signOut, useSession } from "next-auth/client";
 
 const LoginSection = () => {
     const [session] = useSession();
@@ -18,8 +18,13 @@ const LoginSection = () => {
                     <div className="col-sm-5">
                         {!session ? (
                             <div className="form-div text-center">
-                                <h2>Login</h2>
-                                <p>Enter your account details below</p>
+                                <h2>Sign in / Sign up</h2>
+                                <p>
+                                    Enter your email below.
+                                    <br /> A verification email will be sent
+                                    after which an account will be created if
+                                    it&apos;s your first time here!
+                                </p>
                                 <form action="#">
                                     <div className="form-group mt-5">
                                         <input
@@ -31,35 +36,25 @@ const LoginSection = () => {
                                                 emailChangeHandler(event)
                                             }
                                         />
-                                        {/* <input
-                                            className="form-control"
-                                            type="password"
-                                            placeholder="Password"
-                                        /> */}
                                     </div>
-                                    {/* <div className="form-group form-check-label">
-                                    <label htmlFor="tarms-check">
-                                        <input
-                                            className="d-none"
-                                            type="checkbox"
-                                            id="tarms-check"
-                                            checked
-                                        />
-                                        <span className="checkbox"></span>
-                                        <p>Keep me signed in</p>
-                                    </label>
-                                </div> */}
+
                                     <div className="form-group button-block text-center">
                                         <button
                                             className="form-btn"
-                                            onClick={() =>
-                                                signin(
-                                                    "email",
-                                                    emailData,
-                                                    "/login/verify",
-                                                    "/"
-                                                )
-                                            }
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                // signIn("email", emailData, {
+                                                //     callbackUrl:
+                                                //         "/login/verify",
+                                                //     redirect: true,
+                                                // });
+                                                signIn("email", {
+                                                    email: emailData,
+                                                    callbackUrl:
+                                                        "http://localhost:3000/login/verify/",
+                                                    redirect: true,
+                                                });
+                                            }}
                                         >
                                             Sign in with email
                                         </button>
@@ -72,7 +67,18 @@ const LoginSection = () => {
                                             className="form-btn"
                                             type="button"
                                             onClick={() => signIn("github")}
+                                            style={{
+                                                backgroundColor: "#03001c",
+                                            }}
                                         >
+                                            {/* <img
+                                                src="/github.png"
+                                                alt="github login"
+                                            /> */}
+                                            <i
+                                                className="ti-github"
+                                                style={{ marginRight: 10 }}
+                                            ></i>
                                             Sign in with GitHub
                                         </button>
                                         <p className="sign-up-text">
@@ -91,7 +97,7 @@ const LoginSection = () => {
                                     Not <b>{session.user.name}</b>? Then logout
                                     and login again!
                                 </p>
-                                <button className="form-btn" onClick={signout}>
+                                <button className="form-btn" onClick={signOut}>
                                     Logout
                                 </button>
                             </div>

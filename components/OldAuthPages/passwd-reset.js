@@ -1,8 +1,8 @@
 import React from "react";
 
-import Theme from "../components/Theme";
-import Navbar from "../components/Auth/Navbar/Navbar";
-import ResetPassword from "../components/Auth/ResetPassword/ResetPassword";
+import Theme from "../Theme";
+import Navbar from "../Auth/Navbar/Navbar";
+import ResetPassword from "../Auth/ResetPassword/ResetPassword";
 
 const PasswdReset = () => {
     return (

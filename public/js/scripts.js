@@ -12,6 +12,165 @@ $(document).ready(function () {
 
     handlePreloader();
 
+    $(".symptom").owlCarousel({
+        loop: false,
+        margin: 25,
+        nav: false,
+        autoplay: false,
+        dots: false,
+        items: 3,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            600: {
+                items: 2,
+            },
+            900: {
+                items: 2,
+            },
+            1000: {
+                items: 3,
+            },
+        },
+    });
+
+    // $(".banner-slider").owlCarousel({
+    //     loop: true,
+    //     margin: 15,
+    //     nav: false,
+    //     autoplay: true,
+    //     dots: true,
+    //     items: 1,
+    // });
+    // $(".feedback-slider").owlCarousel({
+    //     loop: true,
+    //     margin: 15,
+    //     nav: false,
+    //     autoplay: true,
+    //     dots: true,
+    //     items: 1,
+    // });
+
+    // $(".slide-slider").owlCarousel({
+    //     loop: true,
+    //     margin: 15,
+    //     nav: true,
+    //     autoplay: false,
+    //     dots: false,
+    //     items: 4,
+    //     navText: [
+    //         '<img src="images/left.png" alt="icon" />',
+    //         '<img src="images/right.png" alt="icon" />',
+    //     ],
+    //     responsive: {
+    //         0: {
+    //             items: 2,
+    //         },
+    //         600: {
+    //             items: 3,
+    //         },
+    //         1200: {
+    //             items: 4,
+    //         },
+    //     },
+    // });
+
+    // $(".slide-slider-full").owlCarousel({
+    //     loop: true,
+    //     margin: 15,
+    //     nav: true,
+    //     autoplay: false,
+    //     dots: false,
+    //     items: 5,
+    //     navText: [
+    //         '<img src="images/left.png" alt="icon" />',
+    //         '<img src="images/right.png" alt="icon" />',
+    //     ],
+    //     responsive: {
+    //         0: {
+    //             items: 2,
+    //         },
+    //         600: {
+    //             items: 3,
+    //         },
+    //         1200: {
+    //             items: 3,
+    //         },
+    //         1600: {
+    //             items: 5,
+    //         },
+    //     },
+    // });
+
+    // $(".category-slider").owlCarousel({
+    //     loop: true,
+    //     margin: 10,
+    //     nav: false,
+    //     autoplay: false,
+    //     dots: false,
+    //     items: 6,
+    //     responsive: {
+    //         0: {
+    //             items: 2,
+    //         },
+    //         600: {
+    //             items: 4,
+    //         },
+    //         1200: {
+    //             items: 5,
+    //         },
+    //         1600: {
+    //             items: 6,
+    //         },
+    //     },
+    // });
+    // $(".team-slider").owlCarousel({
+    //     loop: true,
+    //     margin: 15,
+    //     nav: false,
+    //     autoplay: false,
+    //     dots: false,
+    //     items: 7,
+    //     responsive: {
+    //         0: {
+    //             items: 2,
+    //         },
+    //         600: {
+    //             items: 5,
+    //         },
+    //         1200: {
+    //             items: 6,
+    //         },
+    //         1600: {
+    //             items: 7,
+    //         },
+    //     },
+    // });
+
+    // $(".team-slider-full").owlCarousel({
+    //     loop: false,
+    //     margin: 15,
+    //     nav: false,
+    //     autoplay: false,
+    //     dots: false,
+    //     items: 9,
+    //     responsive: {
+    //         0: {
+    //             items: 2,
+    //         },
+    //         600: {
+    //             items: 5,
+    //         },
+    //         1200: {
+    //             items: 6,
+    //         },
+    //         1600: {
+    //             items: 9,
+    //         },
+    //     },
+    // });
+
     $(".member-bttn2").on("click", function () {
         $(".member-1").fadeOut(0);
         $(".member-2").fadeIn();
