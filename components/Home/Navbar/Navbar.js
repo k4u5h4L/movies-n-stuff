@@ -1,7 +1,10 @@
 import React from "react";
 import Link from "next/link";
 
+import { useSession, signOut } from "next-auth/client";
+
 const Navbar = () => {
+    const [session] = useSession();
     return (
         <div className="header-wrapper">
             <div className="container">
@@ -12,6 +15,7 @@ const Navbar = () => {
                                 src="images/logo.png"
                                 alt="logo"
                                 className="light"
+                                height="70"
                             />
                             <img
                                 src="images/logo-white.png"
@@ -51,49 +55,83 @@ const Navbar = () => {
                                 <li className="nav-item">
                                     <Link className="nav-link" href="/register">Register</Link>
                                 </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" href="/login">Login</Link>
-                                </li>
                             </ul>
                         </div>
                     </div>
                     <div className="col-lg-4">
-                        <div className="user-avater">
-                            <img src="images/user-8.png" alt="user" />
-                            <div className="user-menu">
-                                <ul>
-                                    <li>
-                                        <Link href="/user">
-                                            <a>
-                                                <i className="ti-user"></i>
-                                                My Profile
+                        {session ? (
+                            <div className="user-avater">
+                                <img
+                                    src={
+                                        session.user.image ||
+                                        `/images/default_profile_pic.png`
+                                    }
+                                    alt="user"
+                                />
+                                <div className="user-menu">
+                                    <ul>
+                                        <li>
+                                            <Link href="/user">
+                                                <a>
+                                                    <i className="ti-user"></i>
+                                                    My Profile
+                                                </a>
+                                            </Link>
+                                        </li>
+                                        {/* <li>
+                                            <a href="favorites.html">
+                                                <i className="ti-heart"></i>My
+                                                Favorites
                                             </a>
-                                        </Link>
-                                    </li>
-                                    {/* <li>
-                                        <a href="favorites.html">
-                                            <i className="ti-heart"></i>My
-                                            Favorites
-                                        </a>
-                                    </li> */}
-                                    <li>
-                                        <Link href="/faq">
-                                            <a>
-                                                <i className="ti-world"></i>FAQs
-                                            </a>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/logout">
-                                            <a>
+                                        </li> */}
+                                        <li>
+                                            <Link href="/faq">
+                                                <a>
+                                                    <i className="ti-world"></i>
+                                                    FAQs
+                                                </a>
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <a
+                                                onClick={signOut}
+                                                style={{ cursor: "pointer" }}
+                                            >
                                                 <i className="ti-power-off"></i>
                                                 Log Out
                                             </a>
-                                        </Link>
-                                    </li>
-                                </ul>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
+                        ) : (
+                            <div className="user-avater">
+                                <img
+                                    src="/images/default_profile_pic.png"
+                                    alt="user"
+                                />
+                                <div className="user-menu">
+                                    <ul>
+                                        <li>
+                                            <Link href="/login">
+                                                <a>
+                                                    <i className="ti-sign-in-alt"></i>
+                                                    Sign in
+                                                </a>
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/faq">
+                                                <a>
+                                                    <i className="ti-world"></i>
+                                                    FAQs
+                                                </a>
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        )}
                         <div className="search-div">
                             <input type="text" placeholder="Seacrh" />
                         </div>

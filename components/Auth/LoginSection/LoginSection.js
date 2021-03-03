@@ -21,11 +21,11 @@ const LoginSection = () => {
                                             type="email"
                                             placeholder="Email address"
                                         />
-                                        <input
+                                        {/* <input
                                             className="form-control"
                                             type="password"
                                             placeholder="Password"
-                                        />
+                                        /> */}
                                     </div>
                                     {/* <div className="form-group form-check-label">
                                     <label htmlFor="tarms-check">
@@ -40,7 +40,10 @@ const LoginSection = () => {
                                     </label>
                                 </div> */}
                                     <div className="form-group button-block text-center">
-                                        <button className="form-btn">
+                                        <button
+                                            className="form-btn"
+                                            onClick={() => signin("email")}
+                                        >
                                             Sign in with email
                                         </button>
                                     </div>
@@ -51,7 +54,7 @@ const LoginSection = () => {
                                         <button
                                             className="form-btn"
                                             type="button"
-                                            onClick={() => signin("github")}
+                                            onClick={() => signIn("github")}
                                         >
                                             Sign in with GitHub
                                         </button>
