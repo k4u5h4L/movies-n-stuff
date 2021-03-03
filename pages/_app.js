@@ -1,9 +1,11 @@
 import React from "react";
 import Head from "next/head";
 
+import { Provider } from "next-auth/client";
+
 function MyApp({ Component, pageProps }) {
     return (
-        <>
+        <Provider session={pageProps.session}>
             <Head>
                 <meta charSet="UTF-8" />
                 <meta
@@ -14,7 +16,7 @@ function MyApp({ Component, pageProps }) {
                 <title>Movies N&apos; Stuff</title>
             </Head>
             <Component {...pageProps} />
-        </>
+        </Provider>
     );
 }
 
