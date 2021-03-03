@@ -1,5 +1,12 @@
-import { urlObjectKeys } from "next/dist/next-server/lib/utils";
 import React from "react";
+import dynamic from "next/dynamic";
+
+const OwlCarousel = dynamic(
+    () => {
+        return import("react-owl-carousel");
+    },
+    { ssr: false }
+);
 
 const Banner = () => {
     return (
@@ -7,7 +14,14 @@ const Banner = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-sm-12">
-                        <div className="banner-slider owl-carousel owl-theme">
+                        {/* <div className="banner-slider owl-carousel owl-theme"> */}
+                        <OwlCarousel
+                            className="banner-slider owl-carousel owl-theme"
+                            items={1}
+                            margin={15}
+                            loop
+                            autoPlay
+                        >
                             <div className="owl-items">
                                 <div className="banner-wrap justify-content-between align-items-center">
                                     <div className="left-wrap">
@@ -39,7 +53,7 @@ const Banner = () => {
                                             className="btn btn-lg btn-video"
                                         >
                                             <img
-                                                src="images/play.png"
+                                                src="/images/play.png"
                                                 alt="icn"
                                             />
                                             Watch now
@@ -48,7 +62,7 @@ const Banner = () => {
                                     <div
                                         className="right-wrap"
                                         style={{
-                                            backgroundImage: `url(images/banner-4.jpg)`,
+                                            backgroundImage: `url(/images/banner-4.jpg)`,
                                         }}
                                     ></div>
                                 </div>
@@ -84,7 +98,7 @@ const Banner = () => {
                                             className="btn btn-lg btn-video"
                                         >
                                             <img
-                                                src="images/play.png"
+                                                src="/images/play.png"
                                                 alt="icn"
                                             />
                                             Watch now
@@ -93,7 +107,7 @@ const Banner = () => {
                                     <div
                                         className="right-wrap"
                                         style={{
-                                            backgroundImage: `url(images/banner-3.jpg)`,
+                                            backgroundImage: `url(/images/banner-3.jpg)`,
                                         }}
                                     ></div>
                                 </div>
@@ -130,7 +144,7 @@ const Banner = () => {
                                             className="btn btn-lg btn-video"
                                         >
                                             <img
-                                                src="images/play.png"
+                                                src="/images/play.png"
                                                 alt="icn"
                                             />
                                             Watch now
@@ -139,7 +153,7 @@ const Banner = () => {
                                     <div
                                         className="right-wrap"
                                         style={{
-                                            backgroundImage: `url(images/banner-2.jpg)`,
+                                            backgroundImage: `url(/images/banner-2.jpg)`,
                                         }}
                                     ></div>
                                 </div>
@@ -174,7 +188,7 @@ const Banner = () => {
                                             className="btn btn-lg btn-video"
                                         >
                                             <img
-                                                src="images/play.png"
+                                                src="/images/play.png"
                                                 alt="icn"
                                             />
                                             Watch now
@@ -183,14 +197,15 @@ const Banner = () => {
                                     <div className="right-wrap">
                                         <video autoPlay muted loop id="myVideo">
                                             <source
-                                                src="images/video3.mp4"
+                                                src="/images/video3.mp4"
                                                 type="video/mp4"
                                             />
                                         </video>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                            {/* </div> */}
+                        </OwlCarousel>
                     </div>
                 </div>
             </div>

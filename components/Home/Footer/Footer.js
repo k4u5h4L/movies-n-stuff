@@ -10,7 +10,7 @@ const Footer = () => {
                     </div>
                     <div className="col-sm-6 text-left">
                         <img
-                            src="images/icon-21.png"
+                            src="/images/icon-21.png"
                             alt="icon"
                             className="icon-img"
                         />

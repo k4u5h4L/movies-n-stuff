@@ -29,7 +29,7 @@ const Banner = ({ movie }) => {
                                     sensation desperate to become .
                                 </p>
                                 <a href="video.html" className="btn btn-lg">
-                                    <img src="images/play.png" alt="icn" />
+                                    <img src="/images/play.png" alt="icn" />
                                     Watch now
                                 </a>
                                 <a href="#" className="icon-bttn">
@@ -53,7 +53,7 @@ const Banner = ({ movie }) => {
                             <div className="right-wrap">
                                 <video autoPlay muted loop id="myVideo">
                                     <source
-                                        src="images/video1.mp4"
+                                        src="/images/video1.mp4"
                                         type="video/mp4"
                                     />
                                 </video>
@@ -71,14 +71,14 @@ const Banner = ({ movie }) => {
                                         <div
                                             className="slide-image"
                                             style={{
-                                                backgroundImage: `url(images/s4.jpg)`,
+                                                backgroundImage: `url(/images/s4.jpg)`,
                                             }}
                                         ></div>
                                         <div className="slide-content">
                                             <h2>
                                                 Season 1
                                                 <img
-                                                    src="images/plus.png"
+                                                    src="/images/plus.png"
                                                     alt="icon"
                                                 />
                                             </h2>
@@ -103,14 +103,14 @@ const Banner = ({ movie }) => {
                                         <div
                                             className="slide-image"
                                             style={{
-                                                backgroundImage: `url(images/s3.jpg)`,
+                                                backgroundImage: `url(/images/s3.jpg)`,
                                             }}
                                         ></div>
                                         <div className="slide-content">
                                             <h2>
                                                 Season 2
                                                 <img
-                                                    src="images/plus.png"
+                                                    src="/images/plus.png"
                                                     alt="icon"
                                                 />
                                             </h2>
@@ -135,14 +135,14 @@ const Banner = ({ movie }) => {
                                         <div
                                             className="slide-image"
                                             style={{
-                                                backgroundImage: `url(images/s2.jpg)`,
+                                                backgroundImage: `url(/images/s2.jpg)`,
                                             }}
                                         ></div>
                                         <div className="slide-content">
                                             <h2>
                                                 Season 3
                                                 <img
-                                                    src="images/plus.png"
+                                                    src="/images/plus.png"
                                                     alt="icon"
                                                 />
                                             </h2>
@@ -167,14 +167,14 @@ const Banner = ({ movie }) => {
                                         <div
                                             className="slide-image"
                                             style={{
-                                                backgroundImage: `url(images/s1.jpg)`,
+                                                backgroundImage: `url(/images/s1.jpg)`,
                                             }}
                                         ></div>
                                         <div className="slide-content">
                                             <h2>
                                                 Season 4
                                                 <img
-                                                    src="images/plus.png"
+                                                    src="/images/plus.png"
                                                     alt="icon"
                                                 />
                                             </h2>

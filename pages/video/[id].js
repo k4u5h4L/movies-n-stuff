@@ -39,7 +39,7 @@ const Video = ({ movie, status }) => {
 };
 
 export const getServerSideProps = async (context) => {
-    const movieId = parseInt(context.query.id);
+    const movieId = parseInt(context.params.id);
     if (!movieId) {
         return {
             props: {

@@ -19,7 +19,7 @@ export const Player = () => {
             <div className="player">
                 {/* <video
                 id="video"
-                src="images/video1.mp4"
+                src="/images/video1.mp4"
                 // playsinline
                 controls
                 // autoPlay
@@ -31,7 +31,7 @@ export const Player = () => {
                     width={1500}
                     style={{ marginLeft: "100px" }}
                 >
-                    {/* <source src="images/video1.mp4" type="video/mp4" /> */}
+                    {/* <source src="/images/video1.mp4" type="video/mp4" /> */}
                     <source src="/api/video" type="video/mp4" />
 
                     <ControlBar>

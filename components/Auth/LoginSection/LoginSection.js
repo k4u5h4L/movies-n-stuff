@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 
 import { signin, signIn, signout, useSession } from "next-auth/client";
 
 const LoginSection = () => {
     const [session] = useSession();
+
+    const [emailData, setEmailData] = useState("");
+
+    const emailChangeHandler = (e) => {
+        setEmailData(e.target.value);
+    };
     return (
         <section className="form-wrapper">
             <div className="container">
@@ -20,6 +26,10 @@ const LoginSection = () => {
                                             className="form-control"
                                             type="email"
                                             placeholder="Email address"
+                                            style={{ color: "black" }}
+                                            onChange={() =>
+                                                emailChangeHandler(event)
+                                            }
                                         />
                                         {/* <input
                                             className="form-control"
@@ -42,7 +52,14 @@ const LoginSection = () => {
                                     <div className="form-group button-block text-center">
                                         <button
                                             className="form-btn"
-                                            onClick={() => signin("email")}
+                                            onClick={() =>
+                                                signin(
+                                                    "email",
+                                                    emailData,
+                                                    "/login/verify",
+                                                    "/"
+                                                )
+                                            }
                                         >
                                             Sign in with email
                                         </button>

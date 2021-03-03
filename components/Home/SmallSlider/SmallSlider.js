@@ -1,4 +1,12 @@
 import React from "react";
+import dynamic from "next/dynamic";
+
+const OwlCarousel = dynamic(
+    () => {
+        return import("react-owl-carousel");
+    },
+    { ssr: false }
+);
 
 export const SmallSlider = () => {
     return (
@@ -11,20 +19,41 @@ export const SmallSlider = () => {
                 </div>
                 <div className="row">
                     <div className="col-sm-12">
-                        <div className="slide-slider owl-carousel owl-theme">
+                        <OwlCarousel
+                            className="slide-slider owl-carousel owl-theme"
+                            loop
+                            margin={15}
+                            items={4}
+                            nav
+                            navText={[
+                                '<img src="/images/left.png" alt="icon" />',
+                                '<img src="/images/right.png" alt="icon" />',
+                            ]}
+                            responsive={{
+                                0: {
+                                    items: 2,
+                                },
+                                600: {
+                                    items: 3,
+                                },
+                                1200: {
+                                    items: 4,
+                                },
+                            }}
+                        >
                             <div className="owl-items">
                                 <a className="slide-one slide-two" href="#">
                                     <div
                                         className="slide-image"
                                         style={{
-                                            backgroundImage: `url(images/s17.png)`,
+                                            backgroundImage: `url(/images/s17.png)`,
                                         }}
                                     ></div>
                                     <div className="slide-content">
                                         <h2>
                                             Batman Knight{" "}
                                             <img
-                                                src="images/plus.png"
+                                                src="/images/plus.png"
                                                 alt="icon"
                                                 className="add-wishlist"
                                             />
@@ -45,14 +74,14 @@ export const SmallSlider = () => {
                                     <div
                                         className="slide-image"
                                         style={{
-                                            backgroundImage: `url(images/s18.png)`,
+                                            backgroundImage: `url(/images/s18.png)`,
                                         }}
                                     ></div>
                                     <div className="slide-content">
                                         <h2>
                                             Gimini Man{" "}
                                             <img
-                                                src="images/plus.png"
+                                                src="/images/plus.png"
                                                 alt="icon"
                                                 className="add-wishlist"
                                             />
@@ -68,7 +97,7 @@ export const SmallSlider = () => {
                                     </div>
                                 </a>
                             </div>
-                        </div>
+                        </OwlCarousel>
                     </div>
                 </div>
             </div>

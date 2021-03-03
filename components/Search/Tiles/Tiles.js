@@ -10,13 +10,16 @@ const Tiles = () => {
                             <div className="owl-items">
                                 <a className="slide-one" href="season.html">
                                     <div className="slide-image">
-                                        <img src="images/s17.png" alt="image" />
+                                        <img
+                                            src="/images/s17.png"
+                                            alt="image"
+                                        />
                                     </div>
                                     <div className="slide-content">
                                         <h2>
                                             Second Man of Earth
                                             <img
-                                                src="images/plus.png"
+                                                src="/images/plus.png"
                                                 alt="icon"
                                             />
                                         </h2>
@@ -40,13 +43,16 @@ const Tiles = () => {
                             <div className="owl-items">
                                 <a className="slide-one" href="season.html">
                                     <div className="slide-image">
-                                        <img src="images/s18.jpg" alt="image" />
+                                        <img
+                                            src="/images/s18.jpg"
+                                            alt="image"
+                                        />
                                     </div>
                                     <div className="slide-content">
                                         <h2>
                                             Defective Area
                                             <img
-                                                src="images/plus.png"
+                                                src="/images/plus.png"
                                                 alt="icon"
                                             />
                                         </h2>
@@ -70,13 +76,16 @@ const Tiles = () => {
                             <div className="owl-items">
                                 <a className="slide-one" href="season.html">
                                     <div className="slide-image">
-                                        <img src="images/s19.jpg" alt="image" />
+                                        <img
+                                            src="/images/s19.jpg"
+                                            alt="image"
+                                        />
                                     </div>
                                     <div className="slide-content">
                                         <h2>
                                             Law of Order
                                             <img
-                                                src="images/plus.png"
+                                                src="/images/plus.png"
                                                 alt="icon"
                                             />
                                         </h2>
@@ -100,13 +109,16 @@ const Tiles = () => {
                             <div className="owl-items">
                                 <a className="slide-one" href="season.html">
                                     <div className="slide-image">
-                                        <img src="images/s20.jpg" alt="image" />
+                                        <img
+                                            src="/images/s20.jpg"
+                                            alt="image"
+                                        />
                                     </div>
                                     <div className="slide-content">
                                         <h2>
                                             Ravata of Sky
                                             <img
-                                                src="images/plus.png"
+                                                src="/images/plus.png"
                                                 alt="icon"
                                             />
                                         </h2>
@@ -131,13 +143,13 @@ const Tiles = () => {
                             <div className="owl-items">
                                 <a className="slide-one" href="season.html">
                                     <div className="slide-image">
-                                        <img src="images/s5.jpg" alt="image" />
+                                        <img src="/images/s5.jpg" alt="image" />
                                     </div>
                                     <div className="slide-content">
                                         <h2>
                                             Law of Order
                                             <img
-                                                src="images/plus.png"
+                                                src="/images/plus.png"
                                                 alt="icon"
                                             />
                                         </h2>
@@ -161,13 +173,13 @@ const Tiles = () => {
                             <div className="owl-items">
                                 <a className="slide-one" href="season.html">
                                     <div className="slide-image">
-                                        <img src="images/s6.jpg" alt="image" />
+                                        <img src="/images/s6.jpg" alt="image" />
                                     </div>
                                     <div className="slide-content">
                                         <h2>
                                             Ravata of Sky
                                             <img
-                                                src="images/plus.png"
+                                                src="/images/plus.png"
                                                 alt="icon"
                                             />
                                         </h2>

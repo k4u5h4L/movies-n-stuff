@@ -1,6 +1,14 @@
 import React from "react";
+import dynamic from "next/dynamic";
 
-const Categories = () => {
+const OwlCarousel = dynamic(
+    () => {
+        return import("react-owl-carousel");
+    },
+    { ssr: false }
+);
+
+const CategoriesRoot = () => {
     const categories = [
         "comedy",
         "Thriller",
@@ -17,23 +25,44 @@ const Categories = () => {
                         <h2>Categories</h2>
                     </div>
                 </div>
+
                 <div className="row">
                     <div className="col-sm-12">
-                        <div className="category-slider owl-carousel owl-theme">
+                        <OwlCarousel
+                            className="category-slider owl-carousel owl-theme"
+                            loop
+                            margin={10}
+                            autoPlay
+                            items={6}
+                            responsive={{
+                                0: {
+                                    items: 2,
+                                },
+                                600: {
+                                    items: 4,
+                                },
+                                1200: {
+                                    items: 5,
+                                },
+                                1600: {
+                                    items: 6,
+                                },
+                            }}
+                        >
                             {categories.map((category, index) => (
                                 <div className="owl-items" key={index}>
                                     <a
                                         href="search.html"
                                         className="category-wrap"
                                         style={{
-                                            backgroundImage: `url(images/gb2.png)`,
+                                            backgroundImage: `url(/images/gb2.png)`,
                                         }}
                                     >
                                         <span>{category}</span>
                                     </a>
                                 </div>
                             ))}
-                        </div>
+                        </OwlCarousel>
                     </div>
                 </div>
             </div>
@@ -41,4 +70,4 @@ const Categories = () => {
     );
 };
 
-export default Categories;
+export default CategoriesRoot;

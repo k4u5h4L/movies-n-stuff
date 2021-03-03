@@ -4,7 +4,7 @@ const Theme = () => {
     return (
         <>
             <div className="switchcolor">
-                <img src="images/settings.png" alt="icon" />
+                <img src="/images/settings.png" alt="icon" />
             </div>
             <div className="switchcolor-wrap">
                 <a className="link sheet-close">

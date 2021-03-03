@@ -12,13 +12,13 @@ const Navbar = () => {
                     <div className="col-lg-8 navbar p-0">
                         <a href="/" className="logo">
                             <img
-                                src="images/logo.png"
+                                src="/images/logo.png"
                                 alt="logo"
                                 className="light"
                                 height="70"
                             />
                             <img
-                                src="images/logo-white.png"
+                                src="/images/logo-white.png"
                                 alt="logo"
                                 className="dark"
                             />
