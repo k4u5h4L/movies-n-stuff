@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Link from "next/link";
+// import Link from "next/link";
 
 import { signIn, signOut, useSession } from "next-auth/client";
 
@@ -81,12 +81,12 @@ const LoginSection = () => {
                                             ></i>
                                             Sign in with GitHub
                                         </button>
-                                        <p className="sign-up-text">
+                                        {/* <p className="sign-up-text">
                                             Don&apos;t have an account?
                                             <Link href="/register">
                                                 Sign up
                                             </Link>
-                                        </p>
+                                        </p> */}
                                     </div>
                                 </form>
                             </div>

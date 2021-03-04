@@ -1,13 +1,13 @@
 import React from "react";
 
-import Theme from "../../components/Theme";
-import Navbar from "../../components/Home/Navbar/Navbar";
-import Banner from "../../components/Video/Banner/Banner";
-import Cast from "../../components/Video/Cast/Cast";
-import Slider from "../../components/Home/Slider/Slider";
-import Footer from "../../components/Home/Footer/Footer";
+import Theme from "../../Theme";
+import Navbar from "../../Home/Navbar/Navbar";
+import Banner from "../../Video/Banner/Banner";
+import Cast from "../../Video/Cast/Cast";
+import Slider from "../../Home/Slider/Slider";
+import Footer from "../../Home/Footer/Footer";
 
-import Player from "../../components/Watch/Player/Player";
+import Player from "../../Watch/Player/Player";
 
 const Watch = () => {
     return (

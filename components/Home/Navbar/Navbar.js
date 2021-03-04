@@ -46,16 +46,13 @@ const Navbar = () => {
                                 <li className="nav-item">
                                     <Link className="nav-link" href={`/video/${parseInt(1)}`}>Single movie</Link>
                                 </li>
-                                <li className="nav-item">
+                                {/* <li className="nav-item">
                                     <Link className="nav-link" href="/watch">Watch</Link>
-                                </li>
+                                </li> */}
                                 <li className="nav-item">
                                     <Link className="nav-link" href="/search">
                                         Search
                                     </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" href="/register">Register</Link>
                                 </li>
                             </ul>
                         </div>
