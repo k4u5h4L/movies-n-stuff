@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/router";
 
 import Theme from "../../components/Theme";
 import Navbar from "../../components/Home/Navbar/Navbar";
@@ -7,10 +8,7 @@ import Cast from "../../components/Video/Cast/Cast";
 import Slider from "../../components/Home/Slider/Slider";
 import Footer from "../../components/Home/Footer/Footer";
 
-import { PrismaClient } from "@prisma/client";
-import { useRouter } from "next/router";
-
-const prisma = new PrismaClient();
+import prisma from "../../prisma/client";
 
 const Video = ({ movie, status }) => {
     if (typeof window !== "undefined") {

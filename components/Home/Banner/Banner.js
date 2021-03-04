@@ -14,13 +14,13 @@ const Banner = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-sm-12">
-                        {/* <div className="banner-slider owl-carousel owl-theme"> */}
                         <OwlCarousel
                             className="banner-slider owl-carousel owl-theme"
                             items={1}
                             margin={15}
                             loop
                             autoPlay
+                            dots
                         >
                             <div className="owl-items">
                                 <div className="banner-wrap justify-content-between align-items-center">
@@ -204,7 +204,6 @@ const Banner = () => {
                                     </div>
                                 </div>
                             </div>
-                            {/* </div> */}
                         </OwlCarousel>
                     </div>
                 </div>

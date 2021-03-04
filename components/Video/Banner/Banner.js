@@ -1,4 +1,12 @@
 import React from "react";
+import dynamic from "next/dynamic";
+
+const OwlCarousel = dynamic(
+    () => {
+        return import("react-owl-carousel");
+    },
+    { ssr: false }
+);
 
 const Banner = ({ movie }) => {
     return (
@@ -62,7 +70,28 @@ const Banner = ({ movie }) => {
                     </div>
                     <div className="col-sm-12">
                         <div className="slide-wrapper">
-                            <div className="slide-slider owl-carousel owl-theme">
+                            <OwlCarousel
+                                className="slide-slider owl-carousel owl-theme"
+                                loop
+                                margin={15}
+                                nav
+                                items={4}
+                                navText={[
+                                    '<img src="/images/left.png" alt="icon" />',
+                                    '<img src="/images/right.png" alt="icon" />',
+                                ]}
+                                responsive={{
+                                    0: {
+                                        items: 2,
+                                    },
+                                    600: {
+                                        items: 3,
+                                    },
+                                    1200: {
+                                        items: 4,
+                                    },
+                                }}
+                            >
                                 <div className="owl-items">
                                     <a
                                         className="slide-one slide-two slide-three"
@@ -191,7 +220,7 @@ const Banner = ({ movie }) => {
                                         </div>
                                     </a>
                                 </div>
-                            </div>
+                            </OwlCarousel>
                         </div>
                     </div>
                 </div>
