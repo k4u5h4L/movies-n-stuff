@@ -8,6 +8,11 @@
 # custom
 temp/
 temp-old/
+media/
+
+# prisma stuff
+prisma/dev.db
+/*.db
 
 # testing
 /coverage

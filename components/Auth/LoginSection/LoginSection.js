@@ -71,10 +71,6 @@ const LoginSection = () => {
                                                 backgroundColor: "#03001c",
                                             }}
                                         >
-                                            {/* <img
-                                                src="/github.png"
-                                                alt="github login"
-                                            /> */}
                                             <i
                                                 className="ti-github"
                                                 style={{ marginRight: 10 }}
@@ -94,8 +90,12 @@ const LoginSection = () => {
                             <div className="form-div text-center">
                                 <h2>Hmm...</h2>
                                 <p>
-                                    Not <b>{session.user.name}</b>? Then logout
-                                    and login again!
+                                    Not{" "}
+                                    <b>
+                                        {session.user.name ||
+                                            session.user.email}
+                                    </b>
+                                    ? Then logout and login again!
                                 </p>
                                 <button className="form-btn" onClick={signOut}>
                                     Logout

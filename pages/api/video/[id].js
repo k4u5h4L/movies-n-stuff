@@ -1,16 +1,20 @@
 import fs from "fs";
+import prisma from "../../../prisma/client";
 
-export default (req, res) => {
-    // Ensure there is a range given for the video
+export default async (req, res) => {
+    const { id } = req.query;
+
+    const movie = await prisma.movie.findFirst({ where: { id: parseInt(id) } });
 
     try {
+        // Ensure there is a range given for the video
         const range = req.headers.range;
         if (!range) {
             res.status(400).send("Requires Range header");
         }
 
         // get video stats (about 61MB)
-        const videoPath = "public/images/video1.mp4";
+        const videoPath = movie.vidSource;
         const videoSize = fs.statSync(videoPath).size;
 
         // Parse Range
@@ -37,7 +41,7 @@ export default (req, res) => {
         // Stream the video chunk to the client
         videoStream.pipe(res);
     } catch (err) {
-        console.error(err);
+        console.log(err);
         res.status(400).send("Error");
     }
 };

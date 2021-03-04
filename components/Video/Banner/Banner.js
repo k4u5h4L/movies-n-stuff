@@ -44,10 +44,10 @@ const Banner = ({ movie }) => {
                                     <span className="tag">2 h 20 min</span>
                                     <p>{movie.desc}</p>
                                     <p>
-                                        Radhe is a singing prodigy determined to
-                                        follow in the classNameical footsteps of
-                                        his grandfather. Tamanna is a YouTube
-                                        pop sensation desperate to become .
+                                        This movie is really great, and
+                                        amazingly moderate as there is nothing
+                                        much to it. Huh, that makes it average I
+                                        guess.
                                     </p>
                                     <button
                                         className="btn btn-lg"
@@ -77,7 +77,7 @@ const Banner = ({ movie }) => {
                                 <div className="right-wrap">
                                     <video autoPlay muted loop id="myVideo">
                                         <source
-                                            src="/images/video1.mp4"
+                                            src={`/api/video/${movie.id}`}
                                             type="video/mp4"
                                         />
                                     </video>
@@ -94,21 +94,10 @@ const Banner = ({ movie }) => {
                                 loop
                             >
                                 <source
-                                    src="/api/video"
+                                    src={`/api/video/${movie.id}`}
                                     type="video/mp4"
-                                    title="1080p"
+                                    // title="1080p"
                                 />
-                                <source
-                                    src="/api/video"
-                                    type="video/mp4"
-                                    title="720p"
-                                />
-                                <source
-                                    src="/api/video"
-                                    type="video/mp4"
-                                    title="480p"
-                                />
-
                                 <ControlBar>
                                     <ReplayControl seconds={10} order={1.1} />
                                     <ForwardControl seconds={30} order={1.2} />

@@ -19,6 +19,18 @@ const Video = ({ movie, status }) => {
         }
     }
 
+    const fallback = [
+        { id: 1, name: "Tenet", desc: "", vidSource: "media/video-1.mp4" },
+        { id: 2, name: "Endgame", desc: "", vidSource: "media/video-2.mp4" },
+        { id: 3, name: "Ragnarok", desc: "", vidSource: "media/video-3.mp4" },
+        {
+            id: 4,
+            name: "captain marvel",
+            desc: "",
+            vidSource: "media/video-4.mp4",
+        },
+    ];
+
     return (
         <div>
             <Theme />
@@ -27,7 +39,7 @@ const Video = ({ movie, status }) => {
                 <Navbar />
                 <Banner movie={movie} />
                 <Cast />
-                <Slider title="Specials & Latest Movies" />
+                <Slider title="Specials & Latest Movies" movies={fallback} />
                 <Footer />
             </div>
         </div>
