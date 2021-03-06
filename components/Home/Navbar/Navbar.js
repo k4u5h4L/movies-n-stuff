@@ -2,6 +2,9 @@ import React from "react";
 import Link from "next/link";
 
 import { useSession, signOut } from "next-auth/client";
+import dynamic from "next/dynamic";
+
+const Search = dynamic(() => import("../Search/Search"), { ssr: false });
 
 const Navbar = () => {
     const [session] = useSession();
@@ -131,9 +134,7 @@ const Navbar = () => {
                                 </div>
                             </div>
                         )}
-                        <div className="search-div">
-                            <input type="text" placeholder="Seacrh" />
-                        </div>
+                        <Search />
                     </div>
                 </div>
             </div>

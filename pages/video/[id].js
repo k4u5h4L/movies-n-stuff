@@ -10,6 +10,39 @@ import Footer from "../../components/Home/Footer/Footer";
 
 import prisma from "../../prisma/client";
 
+export const getServerSideProps = async (context) => {
+    const movieId = parseInt(context.params.id);
+    if (!movieId) {
+        return {
+            props: {
+                movie: {
+                    id: 9,
+                    name: "Error",
+                    desc: "Bell",
+                },
+                status: false,
+            },
+        };
+    }
+    const movie = await prisma.movie.findFirst({ where: { id: movieId } });
+    return {
+        props: {
+            movie: movie,
+            status: true,
+        },
+    };
+
+    // return {
+    //     props: {
+    //         movie: {
+    //             id: 2,
+    //             name: "Endgame",
+    //             desc: "avengers",
+    //         },
+    //     },
+    // };
+};
+
 const Video = ({ movie, status }) => {
     if (typeof window !== "undefined") {
         const router = useRouter();
@@ -44,39 +77,6 @@ const Video = ({ movie, status }) => {
             </div>
         </div>
     );
-};
-
-export const getServerSideProps = async (context) => {
-    const movieId = parseInt(context.params.id);
-    if (!movieId) {
-        return {
-            props: {
-                movie: {
-                    id: 9,
-                    name: "Error",
-                    desc: "Bell",
-                },
-                status: false,
-            },
-        };
-    }
-    const movie = await prisma.movie.findFirst({ where: { id: movieId } });
-    return {
-        props: {
-            movie: movie,
-            status: true,
-        },
-    };
-
-    // return {
-    //     props: {
-    //         movie: {
-    //             id: 2,
-    //             name: "Endgame",
-    //             desc: "avengers",
-    //         },
-    //     },
-    // };
 };
 
 export default Video;

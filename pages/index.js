@@ -12,11 +12,12 @@ import prisma from "../prisma/client";
 
 export async function getStaticProps(context) {
     const movies = await prisma.movie.findMany();
-    console.log(movies);
+    // console.log(movies);
     return {
         props: {
             movies: movies,
         },
+        revalidate: 1,
     };
 }
 
