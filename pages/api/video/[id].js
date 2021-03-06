@@ -1,13 +1,15 @@
 import fs from "fs";
 import prisma from "../../../prisma/client";
 
+// "webpack": "4.44.1"
+
 export default async (req, res) => {
     const { id } = req.query;
 
     const movie = await prisma.movie.findFirst({ where: { id: parseInt(id) } });
+    // console.log(movie);
 
     try {
-        // Ensure there is a range given for the video
         const range = req.headers.range;
         if (!range) {
             res.status(400).send("Requires Range header");
@@ -19,7 +21,7 @@ export default async (req, res) => {
 
         // Parse Range
         // Example: "bytes=32324-"
-        const CHUNK_SIZE = 5 * 10 ** 6; // 5MB
+        const CHUNK_SIZE = 10 ** 6; // 1MB
         const start = Number(range.replace(/\D/g, ""));
         const end = Math.min(start + CHUNK_SIZE, videoSize - 1);
 
@@ -41,7 +43,7 @@ export default async (req, res) => {
         // Stream the video chunk to the client
         videoStream.pipe(res);
     } catch (err) {
-        console.log(err);
+        console.error(err);
         res.status(400).send("Error");
     }
 };

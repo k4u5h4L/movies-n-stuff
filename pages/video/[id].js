@@ -12,18 +12,7 @@ import prisma from "../../prisma/client";
 
 export const getServerSideProps = async (context) => {
     const movieId = parseInt(context.params.id);
-    if (!movieId) {
-        return {
-            props: {
-                movie: {
-                    id: 9,
-                    name: "Error",
-                    desc: "Bell",
-                },
-                status: false,
-            },
-        };
-    }
+
     const movie = await prisma.movie.findFirst({ where: { id: movieId } });
     return {
         props: {

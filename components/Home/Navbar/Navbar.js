@@ -60,6 +60,13 @@ const Navbar = () => {
                                 <li className="nav-item">
                                     <button className="add-button">Add to home screen</button>
                                 </li>
+                                {/* <li className="nav-item">
+                                <button className="installBtn">
+                                    <div className="left"></div>
+                                        Add To Home Screen
+                                    <div className="right"></div>
+                                </button>
+                                </li> */}
                             </ul>
                         </div>
                     </div>
@@ -137,6 +144,7 @@ const Navbar = () => {
                                 </div>
                             </div>
                         )}
+
                         <Search />
                     </div>
                 </div>
