@@ -57,6 +57,9 @@ const Navbar = () => {
                                         Search
                                     </Link>
                                 </li>
+                                <li className="nav-item">
+                                    <button className="add-button">Add to home screen</button>
+                                </li>
                             </ul>
                         </div>
                     </div>
