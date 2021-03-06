@@ -7,11 +7,12 @@ export default async (req, res) => {
         const movies = await prisma.movie.findMany({
             where: {
                 name: {
-                    contains: query,
+                    contains: query || "",
                 },
             },
         });
-        res.status(200).json({ movies: movies });
+        // console.log(movies);
+        res.status(200).json(movies);
     } else {
         res.status(200).json({ message: "method not allowed" });
     }

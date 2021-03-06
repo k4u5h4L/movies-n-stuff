@@ -112,7 +112,7 @@ const Banner = ({ movie }) => {
                             </VideoPlayer>
                         )}
                     </div>
-                    {!startVideo ? (
+                    {/* {!startVideo ? (
                         <div className="col-sm-12">
                             <div className="slide-wrapper">
                                 <OwlCarousel
@@ -276,7 +276,7 @@ const Banner = ({ movie }) => {
                                 </OwlCarousel>
                             </div>
                         </div>
-                    ) : null}
+                    ) : null} */}
                 </div>
             </div>
         </div>

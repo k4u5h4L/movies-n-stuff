@@ -1,22 +1,14 @@
 import React, { useState } from "react";
+import { useRouter } from "next/router";
 
 const Search = () => {
+    const router = useRouter();
     const [search, setSearch] = useState("");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const res = await fetch(`/api/search/`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(search),
-        });
-
-        const data = await res.json();
-
-        console.log(data);
+        router.push(`/search?query=${encodeURI(search)}`);
     };
 
     const handleChange = (e) => {

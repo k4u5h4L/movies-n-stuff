@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import dynamic from "next/dynamic";
 
 const OwlCarousel = dynamic(
@@ -8,7 +9,8 @@ const OwlCarousel = dynamic(
     { ssr: false }
 );
 
-const Tiles = () => {
+const Tiles = ({ movies }) => {
+    // console.log(movies);
     return (
         <div className="slide-wrapper mt-1 search-wrap-slide">
             <div className="container">
@@ -20,10 +22,10 @@ const Tiles = () => {
                             margin={15}
                             nav
                             items={4}
-                            navText={[
-                                '<img src="images/left.png" alt="icon" />',
-                                '<img src="images/right.png" alt="icon" />',
-                            ]}
+                            // navText={[
+                            //     '<img src="/images/left.png" alt="icon" />',
+                            //     '<img src="/images/right.png" alt="icon" />',
+                            // ]}
                             dots={false}
                             responsive={{
                                 0: {
@@ -37,199 +39,42 @@ const Tiles = () => {
                                 },
                             }}
                         >
-                            <div className="owl-items">
-                                <a className="slide-one" href="season.html">
-                                    <div className="slide-image">
-                                        <img
-                                            src="/images/s17.png"
-                                            alt="image"
-                                        />
-                                    </div>
-                                    <div className="slide-content">
-                                        <h2>
-                                            Second Man of Earth
-                                            <img
-                                                src="/images/plus.png"
-                                                alt="icon"
-                                            />
-                                        </h2>
-                                        <p>
-                                            Radhe is a singing prodigy
-                                            determined to follow in the
-                                            classNameical footsteps of his
-                                            grandfather.
-                                        </p>
-                                        <span className="tag">2 h 20 min</span>
-                                        <span className="tag">2020</span>
-                                        <span className="tag">
-                                            <b>HD</b>
-                                        </span>
-                                        <span className="tag">
-                                            <b>16+</b>
-                                        </span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="owl-items">
-                                <a className="slide-one" href="season.html">
-                                    <div className="slide-image">
-                                        <img
-                                            src="/images/s18.jpg"
-                                            alt="image"
-                                        />
-                                    </div>
-                                    <div className="slide-content">
-                                        <h2>
-                                            Defective Area
-                                            <img
-                                                src="/images/plus.png"
-                                                alt="icon"
-                                            />
-                                        </h2>
-                                        <p>
-                                            Radhe is a singing prodigy
-                                            determined to follow in the
-                                            classNameical footsteps of his
-                                            grandfather.
-                                        </p>
-                                        <span className="tag">2 h 20 min</span>
-                                        <span className="tag">2020</span>
-                                        <span className="tag">
-                                            <b>HD</b>
-                                        </span>
-                                        <span className="tag">
-                                            <b>16+</b>
-                                        </span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="owl-items">
-                                <a className="slide-one" href="season.html">
-                                    <div className="slide-image">
-                                        <img
-                                            src="/images/s19.jpg"
-                                            alt="image"
-                                        />
-                                    </div>
-                                    <div className="slide-content">
-                                        <h2>
-                                            Law of Order
-                                            <img
-                                                src="/images/plus.png"
-                                                alt="icon"
-                                            />
-                                        </h2>
-                                        <p>
-                                            Radhe is a singing prodigy
-                                            determined to follow in the
-                                            classNameical footsteps of his
-                                            grandfather.
-                                        </p>
-                                        <span className="tag">2 h 20 min</span>
-                                        <span className="tag">2020</span>
-                                        <span className="tag">
-                                            <b>HD</b>
-                                        </span>
-                                        <span className="tag">
-                                            <b>16+</b>
-                                        </span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="owl-items">
-                                <a className="slide-one" href="season.html">
-                                    <div className="slide-image">
-                                        <img
-                                            src="/images/s20.jpg"
-                                            alt="image"
-                                        />
-                                    </div>
-                                    <div className="slide-content">
-                                        <h2>
-                                            Ravata of Sky
-                                            <img
-                                                src="/images/plus.png"
-                                                alt="icon"
-                                            />
-                                        </h2>
-                                        <p>
-                                            Radhe is a singing prodigy
-                                            determined to follow in the
-                                            classNameical footsteps of his
-                                            grandfather.
-                                        </p>
-                                        <span className="tag">2 h 20 min</span>
-                                        <span className="tag">2020</span>
-                                        <span className="tag">
-                                            <b>HD</b>
-                                        </span>
-                                        <span className="tag">
-                                            <b>16+</b>
-                                        </span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div className="owl-items">
-                                <a className="slide-one" href="season.html">
-                                    <div className="slide-image">
-                                        <img src="/images/s5.jpg" alt="image" />
-                                    </div>
-                                    <div className="slide-content">
-                                        <h2>
-                                            Law of Order
-                                            <img
-                                                src="/images/plus.png"
-                                                alt="icon"
-                                            />
-                                        </h2>
-                                        <p>
-                                            Radhe is a singing prodigy
-                                            determined to follow in the
-                                            classNameical footsteps of his
-                                            grandfather.
-                                        </p>
-                                        <span className="tag">2 h 20 min</span>
-                                        <span className="tag">2020</span>
-                                        <span className="tag">
-                                            <b>HD</b>
-                                        </span>
-                                        <span className="tag">
-                                            <b>16+</b>
-                                        </span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="owl-items">
-                                <a className="slide-one" href="season.html">
-                                    <div className="slide-image">
-                                        <img src="/images/s6.jpg" alt="image" />
-                                    </div>
-                                    <div className="slide-content">
-                                        <h2>
-                                            Ravata of Sky
-                                            <img
-                                                src="/images/plus.png"
-                                                alt="icon"
-                                            />
-                                        </h2>
-                                        <p>
-                                            Radhe is a singing prodigy
-                                            determined to follow in the
-                                            classNameical footsteps of his
-                                            grandfather.
-                                        </p>
-                                        <span className="tag">2 h 20 min</span>
-                                        <span className="tag">2020</span>
-                                        <span className="tag">
-                                            <b>HD</b>
-                                        </span>
-                                        <span className="tag">
-                                            <b>16+</b>
-                                        </span>
-                                    </div>
-                                </a>
-                            </div>
+                            {movies.map((movie, index) => (
+                                <div className="owl-items" key={index}>
+                                    <Link href={`/video/${movie.id}`}>
+                                        <a className="slide-one">
+                                            <div className="slide-image">
+                                                <img
+                                                    src="/images/s17.png"
+                                                    alt="image"
+                                                />
+                                            </div>
+                                            <div className="slide-content">
+                                                <h2>
+                                                    {movie.name}
+                                                    <img
+                                                        src="/images/plus.png"
+                                                        alt="icon"
+                                                    />
+                                                </h2>
+                                                <p>{movie.desc}</p>
+                                                <span className="tag">
+                                                    2 h 20 min
+                                                </span>
+                                                <span className="tag">
+                                                    2020
+                                                </span>
+                                                <span className="tag">
+                                                    <b>HD</b>
+                                                </span>
+                                                <span className="tag">
+                                                    <b>16+</b>
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </Link>
+                                </div>
+                            ))}
                         </OwlCarousel>
                     </div>
                 </div>

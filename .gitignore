@@ -10,6 +10,10 @@ temp/
 temp-old/
 media/
 
+# pwa stuff
+public/sw.js
+public/workbox-a8b10d99.js
+
 # prisma stuff
 prisma/dev.db
 /*.db
