@@ -47,19 +47,19 @@ const Navbar = () => {
                             {/* prettier-ignore */}
                             <ul className="navbar-nav nav-menu float-none text-center">
                                 <li className="nav-item">
-                                    <Link className="nav-link" href={`/video/${parseInt(1)}`}>Single movie</Link>
+                                    <Link className="nav-link" href={`/video/${parseInt(2)}`}>Featured</Link>
                                 </li>
                                 {/* <li className="nav-item">
                                     <Link className="nav-link" href="/watch">Watch</Link>
                                 </li> */}
                                 <li className="nav-item">
-                                    <Link className="nav-link" href="/search">
-                                        Search
+                                    <Link className="nav-link" href="/login">
+                                        Login
                                     </Link>
                                 </li>
-                                <li className="nav-item">
+                                {/* <li className="nav-item">
                                     <button className="add-button">Add to home screen</button>
-                                </li>
+                                </li> */}
                                 {/* <li className="nav-item">
                                 <button className="installBtn">
                                     <div className="left"></div>
@@ -139,6 +139,15 @@ const Navbar = () => {
                                                     FAQs
                                                 </a>
                                             </Link>
+                                        </li>
+                                        <li>
+                                            <a
+                                                className="add-button"
+                                                style={{ cursor: "pointer" }}
+                                            >
+                                                <i className="ti-heart"></i>
+                                                Install PWA
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>

@@ -50,7 +50,7 @@ const Slider = (props) => {
                                     <Link href={`/video/${movie.id}`}>
                                         <a className="slide-one">
                                             <div className="slide-image">
-                                                <img
+                                                <Image
                                                     // src={`/images/s${
                                                     //     parseInt(movie.id) %
                                                     //     props.movies.length
@@ -75,10 +75,10 @@ const Slider = (props) => {
                                                     />
                                                 </h2>
                                                 <p>
-                                                    Radhe is a singing prodigy
-                                                    determined to follow in the
-                                                    classNameical footsteps of
-                                                    his grandfather.
+                                                    I was going to type some
+                                                    elaborate description, but I
+                                                    guess gibberish works as
+                                                    well. So here you have it.
                                                 </p>
                                                 <span className="tag">
                                                     2 h 20 min

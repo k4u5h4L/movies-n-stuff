@@ -52,7 +52,11 @@ npx prisma migrate dev --preview-feature
 npx prisma generate
 ```
 
--   Now run development server.
+-   Create a folder called `thumbnails/` in the `public/` directory. Add the thumbnails you want to display on those movies. Name them serially as `pic-1.jpg`, `pic-2.jpg`, etc. Stick to `.jpg` format.
+
+-   Create a folder called `media/` in the root directory. Here, add the videos/movies you want to be streamed to the client. Name them serially as `video-1.mp4`, `video-2.mp4`, etc. Stick to `.mp4` format.
+
+-   Now with all the API keys and media loaded, run development server.
 
 ```
 yan dev
