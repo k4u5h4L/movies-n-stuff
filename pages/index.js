@@ -32,6 +32,90 @@ const Home = ({ movies }) => {
             desc: "",
             vidSource: "media/video-4.mp4",
         },
+        {
+            id: 5,
+            name: "GotG",
+            desc: "star lord",
+            vidSource: "media/video-5.mp4",
+        },
+        {
+            id: 6,
+            name: "Spiderman",
+            desc: "Homegoing",
+            vidSource: "media/video-6.mp4",
+        },
+        {
+            id: 7,
+            name: "doctor strange",
+            desc: "magic",
+            vidSource: "media/video-7.mp4",
+        },
+        {
+            id: 8,
+            name: "captain america",
+            desc: "murica",
+            vidSource: "media/video-8.mp4",
+        },
+        {
+            id: 9,
+            name: "venom",
+            desc: "black goo",
+            vidSource: "media/video-9.mp4",
+        },
+        {
+            id: 10,
+            name: "black widow",
+            desc: "hero",
+            vidSource: "media/video-10.mp4",
+        },
+        {
+            id: 11,
+            name: "deadpool",
+            desc: "chihuahua",
+            vidSource: "media/video-11.mp4",
+        },
+        {
+            id: 12,
+            name: "logan",
+            desc: "claws",
+            vidSource: "media/video-12.mp4",
+        },
+        {
+            id: 13,
+            name: "black panther",
+            desc: "wakanda",
+            vidSource: "media/video-13.mp4",
+        },
+        {
+            id: 14,
+            name: "antman",
+            desc: "smol",
+            vidSource: "media/video-14.mp4",
+        },
+        {
+            id: 15,
+            name: "wanda",
+            desc: "magic but red",
+            vidSource: "media/video-15.mp4",
+        },
+        {
+            id: 16,
+            name: "stark",
+            desc: "iron",
+            vidSource: "media/video-16.mp4",
+        },
+        {
+            id: 17,
+            name: "thanos",
+            desc: "purple giant",
+            vidSource: "media/video-17.mp4",
+        },
+        {
+            id: 18,
+            name: "hulk",
+            desc: "big green",
+            vidSource: "media/video-18.mp4",
+        },
     ];
     return (
         <div>

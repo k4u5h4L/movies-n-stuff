@@ -27,10 +27,10 @@ const Slider = (props) => {
                             margin={15}
                             nav
                             items={4}
-                            navText={[
-                                '<img src="/images/left.png" alt="icon" />',
-                                '<img src="/images/right.png" alt="icon" />',
-                            ]}
+                            // navText={[
+                            //     '<img src="/images/left.png" alt="icon" />',
+                            //     '<img src="/images/right.png" alt="icon" />',
+                            // ]}
                             responsive={{
                                 0: {
                                     items: 2,
@@ -49,7 +49,10 @@ const Slider = (props) => {
                                         <a className="slide-one">
                                             <div className="slide-image">
                                                 <img
-                                                    src="/images/s5.jpg"
+                                                    src={`/images/s${
+                                                        parseInt(movie.id) %
+                                                        props.movies.length
+                                                    }.jpg`}
                                                     alt="image"
                                                 />
                                             </div>

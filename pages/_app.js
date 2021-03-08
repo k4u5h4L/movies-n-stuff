@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import NextNprogress from "nextjs-progressbar";
 
 import { Provider } from "next-auth/client";
 
@@ -161,6 +162,12 @@ function MyApp({ Component, pageProps }) {
                     media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
                 ></link>
             </Head>
+            <NextNprogress
+                color="#132977"
+                startPosition={0.3}
+                stopDelayMs={200}
+                height="3"
+            />
             <Component {...pageProps} />
         </Provider>
     );
