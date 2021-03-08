@@ -9,6 +9,8 @@
 temp/
 temp-old/
 media/
+thumbnails/
+public/thumbnails/
 
 # pwa stuff
 public/sw.js

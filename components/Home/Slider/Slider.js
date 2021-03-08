@@ -1,6 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import Image from "next/image";
 
 const OwlCarousel = dynamic(
     () => {
@@ -11,6 +12,7 @@ const OwlCarousel = dynamic(
 
 const Slider = (props) => {
     // console.log(props.movies);
+
     return (
         <div className="slide-wrapper">
             <div className="container">
@@ -49,10 +51,17 @@ const Slider = (props) => {
                                         <a className="slide-one">
                                             <div className="slide-image">
                                                 <img
-                                                    src={`/images/s${
-                                                        parseInt(movie.id) %
-                                                        props.movies.length
-                                                    }.jpg`}
+                                                    // src={`/images/s${
+                                                    //     parseInt(movie.id) %
+                                                    //     props.movies.length
+                                                    // }.jpg`}
+                                                    width={400}
+                                                    height={400}
+                                                    // src={`../thumbnails/pic-${
+                                                    //     parseInt(movie.id) %
+                                                    //     props.movies.length
+                                                    // }.jpg`}
+                                                    src={`/thumbnails/pic-${movie.id}.jpg`}
                                                     alt="image"
                                                 />
                                             </div>
