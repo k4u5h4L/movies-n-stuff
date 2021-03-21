@@ -59,7 +59,7 @@ npx prisma generate
 -   Now with all the API keys and media loaded, run development server.
 
 ```
-yan dev
+yarn dev
 ```
 
 -   Now visit the location [localhost:3000](http://localhost:3000) to check out the site!
