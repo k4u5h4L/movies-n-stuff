@@ -71,3 +71,5 @@ yarn dev
 -   It is for learning purposes only.
 
 -   Any contribution is welcome. You may fork the repo and issue a PR.
+
+-   It's not good practice to include the thumbnails in your `public/` dir. Instead, you should consider external data buckets like cloundinary, etc. to store images, pics, videos and stuff. This project is just for learning purposes, as mentioned, so this approach doesn't really scale when you have lots of images.
